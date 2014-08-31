@@ -24,6 +24,7 @@
 		7A34918D19B317000075D53D /* InstgrmIntegrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A34918C19B317000075D53D /* InstgrmIntegrationTests.m */; };
 		7A34919A19B31D350075D53D /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A34919919B31D350075D53D /* LoginVC.m */; };
 		7A34919D19B31D490075D53D /* PhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A34919C19B31D490075D53D /* PhotoVC.m */; };
+		7A3491A319B328EE0075D53D /* InstagramManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A3491A219B328EE0075D53D /* InstagramManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +58,12 @@
 		7A34918819B317000075D53D /* InstgrmIntegrationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InstgrmIntegrationTests-Info.plist"; sourceTree = "<group>"; };
 		7A34918A19B317000075D53D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7A34918C19B317000075D53D /* InstgrmIntegrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstgrmIntegrationTests.m; sourceTree = "<group>"; };
-		7A34919719B31BE70075D53D /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
 		7A34919819B31D350075D53D /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		7A34919919B31D350075D53D /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		7A34919B19B31D490075D53D /* PhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoVC.h; sourceTree = "<group>"; };
 		7A34919C19B31D490075D53D /* PhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoVC.m; sourceTree = "<group>"; };
+		7A3491A119B328EE0075D53D /* InstagramManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramManager.h; sourceTree = "<group>"; };
+		7A3491A219B328EE0075D53D /* InstagramManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,11 +131,12 @@
 				7A34917719B317000075D53D /* ViewController.m */,
 				7A34917919B317000075D53D /* Images.xcassets */,
 				7A34916519B317000075D53D /* Supporting Files */,
-				7A34919719B31BE70075D53D /* Helpers.h */,
 				7A34919819B31D350075D53D /* LoginVC.h */,
 				7A34919919B31D350075D53D /* LoginVC.m */,
 				7A34919B19B31D490075D53D /* PhotoVC.h */,
 				7A34919C19B31D490075D53D /* PhotoVC.m */,
+				7A3491A119B328EE0075D53D /* InstagramManager.h */,
+				7A3491A219B328EE0075D53D /* InstagramManager.m */,
 			);
 			path = InstgrmIntegration;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				7A34917819B317000075D53D /* ViewController.m in Sources */,
 				7A34916F19B317000075D53D /* AppDelegate.m in Sources */,
 				7A34919A19B31D350075D53D /* LoginVC.m in Sources */,
+				7A3491A319B328EE0075D53D /* InstagramManager.m in Sources */,
 				7A34919D19B31D490075D53D /* PhotoVC.m in Sources */,
 				7A34916B19B317000075D53D /* main.m in Sources */,
 			);
