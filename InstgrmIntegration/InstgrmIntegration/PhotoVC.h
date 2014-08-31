@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoVC : UIViewController
+@interface PhotoVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property IBOutlet UICollectionView *collectionView;
+@property IBOutlet UIActivityIndicatorView *activityIndicator;
+
+@property NSMutableArray *imageArray;
 
 @end
