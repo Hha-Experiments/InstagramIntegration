@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "InstagramManager.h"
 
 @interface ViewController ()
 
@@ -14,16 +15,35 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSArray *instagramCookies = [InstagramManager getInstagramCookies];
+    if (instagramCookies.count > 0) {
+        
+        NSString *strAccessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"access_token"];
+        [[InstagramManager sharedManager] setAccessToken:strAccessToken];
+        [self showPhotoVC];
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccessfulNotificaitonReceived) name:@"LoginVC::loginSuccessful:Notification" object:nil];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)showPhotoVC {
+    
+    [self performSegueWithIdentifier:@"PhotoVC" sender:self];
+}
+
+- (void)loginSuccessfulNotificaitonReceived {
+    
+    [self.navigationController popViewControllerAnimated:NO];
+    [self showPhotoVC];
 }
 
 @end

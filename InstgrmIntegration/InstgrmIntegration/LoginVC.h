@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginVC : UIViewController
+@interface LoginVC : UIViewController <UIWebViewDelegate>
 
 @property IBOutlet UIWebView *webview;
+@property IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end

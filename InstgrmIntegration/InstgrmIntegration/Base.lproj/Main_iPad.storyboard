@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="559" y="-696"/>
         </scene>
-        <!--View Controller - Photos-->
+        <!--PhotoVC - Photos-->
         <scene sceneID="BmD-SI-Sbl">
             <objects>
-                <viewController id="g9B-h7-q3b" sceneMemberID="viewController">
+                <viewController id="g9B-h7-q3b" customClass="PhotoVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xua-lL-fmu">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,14 +52,50 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="Nz5-cj-8hy">
+                                        <rect key="frame" x="0.0" y="64" width="160" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view tag="690000" contentMode="scaleToFill" id="UX9-dn-xVV">
+                                                    <rect key="frame" x="2" y="2" width="156" height="156"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" tag="13463" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VCr-Og-H6b">
+                                                    <rect key="frame" x="4" y="4" width="152" height="130"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="customSize" width="160" height="160"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="g9B-h7-q3b" id="fxs-9k-Zlg"/>
+                                    <outlet property="delegate" destination="g9B-h7-q3b" id="Y8i-Dr-HBm"/>
+                                </connections>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" id="zGL-Sn-Td0">
+                                <rect key="frame" x="350" y="502" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Photos" id="8M0-tG-hhS">
                         <barButtonItem key="backBarButtonItem" title="Logout" id="VRb-Tb-ODv"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="zGL-Sn-Td0" id="vS0-gM-BHa"/>
+                        <outlet property="collectionView" destination="76H-gt-Qcg" id="bbU-cC-Jyf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZN-aJ-LlS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="-382" y="-696"/>
         </scene>
-        <!--View Controller - Login-->
+        <!--LoginVC - Login-->
         <scene sceneID="Axp-KF-YEh">
             <objects>
-                <viewController id="n9o-J1-ZyG" sceneMemberID="viewController">
+                <viewController id="n9o-J1-ZyG" customClass="LoginVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dne-9s-G70">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,12 +132,20 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" id="iGQ-X3-zhk">
+                                <rect key="frame" x="366" y="493" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="EES-Jz-tAH">
                         <barButtonItem key="backBarButtonItem" title="Back" id="XbI-iN-VKJ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="iGQ-X3-zhk" id="ZBb-kH-c87"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezY-2x-xWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
